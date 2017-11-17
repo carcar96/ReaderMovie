@@ -1,0 +1,23 @@
+<!--detail.wxml-->
+<view class="container">
+  <view class="bg-img">
+    <image src="{{isPlayingMusic?music.coverImgUrl:index_img}}"></image>
+    <image catchtap="onMusicTap" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
+  </view>
+  <view class="info">
+    <image src="{{author_img}}"></image>
+    <text class="author">{{author}}</text>
+    <text class="staic">发表于</text>
+    <text class="date">{{date}}</text>
+  </view>
+  <text class="title">{{title}}</text>
+  <view class="divideBox">
+    <view class="divide"></view>
+    <image src="/images/icon/share.png" catchtap="onShareTap"></image>
+    <image wx:if="{{collected}}" src="/images/icon/collection.png" catchtap="onCollectionTap"></image>
+    <image wx:else src="/images/icon/collection-anti.png" catchtap="onCollectionTap"></image>
+  </view>
+  <view class="content">
+    <p>{{detail}}</p>
+  </view>
+</view>

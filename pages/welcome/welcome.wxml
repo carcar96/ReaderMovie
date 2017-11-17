@@ -1,0 +1,8 @@
+<!--welcome.wxml-->
+<view class="contanier" wx:if="{{pageShow}}">
+  <image src="{{avatarUrl}}"></image>
+  <text>Hello,{{nickName}}!</text>
+  <view class="btn" bindtap="navigateToIndex">
+    <text>开启小程序之旅</text>
+  </view>
+</view>

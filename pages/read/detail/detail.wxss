@@ -1,0 +1,94 @@
+/* detail.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-img {
+  height: 400rpx;
+}
+
+.bg-img > image:nth-child(1) {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img > image:nth-child(2) {
+  width: 94rpx;
+  height: 96rpx;
+  position: relative;
+  top: -255rpx;
+  left: 325rpx;
+  opacity: 0.6;
+}
+
+.info {
+  margin: 20rpx 30rpx;
+}
+
+.info > image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.author {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+  color: #666;
+  vertical-align: middle;
+}
+
+.staic {
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  color: #999;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #4b556c;
+  margin: 10rpx 30rpx;
+  letter-spacing: 5rpx;
+}
+
+.divideBox {
+  margin: 60rpx 40rpx;
+}
+
+.divide {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 3rpx;
+  background-color: #eee;
+}
+
+.divideBox image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  float: right;
+  margin-top: -41rpx;
+}
+
+.content {
+  margin: 0 30rpx 50rpx 30rpx;
+}
+
+.content > p {
+  line-height: 44rpx;
+  letter-spacing: 2rpx;
+  font-size: 26rpx;
+  color: #666;
+  text-indent: 1em;
+  display: block;
+}

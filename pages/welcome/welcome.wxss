@@ -1,0 +1,43 @@
+/* welcome.wxss */
+
+page {
+  height: 100%;
+}
+
+.contanier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Microsoft YaHei';
+  background-color: #9da6d2;
+  height: 100%;
+}
+
+.contanier image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 180rpx;
+  border-radius: 50%;
+}
+
+.contanier > text {
+  font-weight: 600;
+  font-size: 32rpx;
+  margin-top: 100rpx;
+}
+
+.btn {
+  margin-top: 160rpx;
+  width: 230rpx;
+  height: 74rpx;
+  text-align: center;
+  border: 1px solid #405f80;
+  border-radius: 5rpx;
+}
+
+.btn > text {
+  font-size: 25rpx;
+  font-weight: bold;
+  line-height: 74rpx;
+  color: #405f80;
+}

@@ -1,0 +1,55 @@
+<import src="../movie_template/movie.wxml" />
+
+<view wx:if="{{loading}}" class="loading_container">
+  <image mode="center" src="http://p2.so.qhimgs1.com/bdr/_240_/t01e9eaed0cc155486e.gif"></image>
+</view>
+
+<view wx:else class="celebrity_container">
+  <view class="infoBgImg" catchtap="onPreviewImg" data-src="{{castInfo.avartar}}">
+    <image class="info_bg_img" mode="aspectFill" src="{{castInfo.avartar}}"></image>
+    <view class="name">
+      <image class="info_img" mode="aspectFill" src="{{castInfo.avartar}}"></image>
+      <text>{{castInfo.name}}</text>
+      <text>{{castInfo.aka_en}}</text>
+    </view>
+  </view>
+  <view class="info_container">
+    <view class="title">
+      <text>基本信息</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">姓名</text>
+      <text class="right">{{castInfo.name}}</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">性别</text>
+      <text class="right">{{castInfo.gender}}</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">职业</text>
+      <text class="right">{{castInfo.roles}}</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">出生地</text>
+      <text class="right">{{castInfo.born}}</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">外文名</text>
+      <text class="right">{{castInfo.english_name}}</text>
+    </view>
+    <view class="horizontal">
+      <text class="left">更多中文名</text>
+      <text class="right">{{castInfo.chinese_name}}</text>
+    </view>
+  </view>
+  <view class="info_container works">
+    <text class="title">作品</text>
+    <scroll-view class="scroll_view_c" scroll-x="true" style="width:100%">
+      <block wx:for="{{castInfo.works}}" wx:key="*that" wx:for-item="work">
+        <view class="scroll_single">
+          <template is="movieTemplate" data="{{...work}}"></template>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

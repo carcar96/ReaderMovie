@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<import src="index_template/index_template.wxml" />
+<view class="container">
+  <swiper catchtap="onSwiperItemTap" indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item>
+      <image data-postId="4" src="/images/iqiyi.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image data-postId="1" src="/images/vr.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image data-postId="2" src="/images/wx.png" class="slide-image" />
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{index_key}}" wx:key="*this" wx:for-item="item" wx:for-index="ide">
+    <view class="content" catchtap="navigateToDetail" data-postId="{{item.id}}">
+      <template is="indexItem" data="{{item}}" />
+    </view>
+
+  </block>
+</view>

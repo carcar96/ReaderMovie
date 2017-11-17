@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/read/index/index",
+    "pages/movie/movie_index/index",
+    "pages/read/detail/detail",
+    "pages/movie/movie_detail/movie_detail",
+    "pages/movie/movie_more/movie_more",
+    "pages/movie/movie_celebrity/movie_celebrity"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#26139A"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#26139A",
+    "list": [
+      {
+        "pagePath": "pages/read/index/index",
+        "text": "阅读",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
+      },
+      {
+        "pagePath": "pages/movie/movie_index/index",
+        "text": "电影",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
+      }
+    ]
+  }
+}

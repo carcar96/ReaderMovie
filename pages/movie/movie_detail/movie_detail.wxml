@@ -1,0 +1,75 @@
+<import src="../stars_template/stars.wxml" />
+
+<view class="movie_detail_container">
+  <view catchtap="onPreviewImg" data-src="{{movie.movieImg}}" class="movieBg_container">
+    <image src="{{movie.movieImg}}" mode="aspectFill" class="bgImg"></image>
+    <image catchtap="onPreviewImg" data-src="{{movie.movieImg}}" src="{{movie.movieImg}}" class="coverImg"></image>
+  </view>
+  <view catchtap="onPreviewImg" data-src="{{movie.movieImg}}" class="bg_word">
+    <view class="bg_title">
+      <text>{{movie.title}}</text>
+    </view>
+    <view class="bg_year">
+      <text>{{movie.country}} • {{movie.year}}</text>
+    </view>
+    <view class="bg_num">
+      <text class="number">{{movie.wish_count}}</text>
+      <text class="staic">人喜欢</text>
+      <text class="number">{{movie.comments_count}}</text>
+      <text class="staic">条评论</text>
+    </view>
+  </view>
+  <view class="info_container">
+    <view class="movie_title">
+      <text>{{movie.original_title}}</text>
+    </view>
+    <view class="tepl_container">
+      <view class="score_left">
+        <text>评分</text>
+      </view>
+      <view class="score_right special">
+        <template is="starsTemplate" data="{{stars:movie.stars,average:movie.average}}"></template>
+      </view>
+    </view>
+    <view class="tepl_container">
+      <text class="left">导演</text>
+      <text class="right">{{movie.directors}}</text>
+    </view>
+    <view class="tepl_container">
+      <text class="left">影人</text>
+      <text class="right">{{movie.casts}}</text>
+    </view>
+    <view class="tepl_container">
+      <text class="left">类型</text>
+      <text class="right">{{movie.genres}}</text>
+    </view>
+  </view>
+  <view class="info_container">
+    <view class="detail_content">
+      <text>剧情简介</text>
+    </view>
+    <p>{{movie.summary}}</p>
+  </view>
+  <view class="info_container">
+    <text class="cast_p">导演 ({{movie.directorsInfo.length}})</text>
+    <scroll-view class="scroll_view_c" scroll-x="true" style="width:100%">
+      <block wx:for="{{movie.directorsInfo}}" wx:key="*tha" wx:for-item="dir">
+        <view class="cast_container" bindtap="onCastCele" data-castId="{{dir.id}}">
+          <image class="cast_img" src="{{dir.img}}"></image>
+          <text class="cast_name">{{dir.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="cast">
+    <text class="cast_p">影人 ({{movie.castsInfo.length}})</text>
+    <scroll-view class="scroll_view_c" scroll-x="true" style="width:100%">
+      <block wx:for="{{movie.castsInfo}}" wx:key="*the" wx:for-item="cast">
+        <view class="cast_container" bindtap="onCastCele" data-castId="{{cast.id}}">
+          <image class="cast_img" src="{{cast.img}}"></image>
+          <text class="cast_name">{{cast.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

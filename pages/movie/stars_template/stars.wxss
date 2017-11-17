@@ -1,0 +1,26 @@
+.stars_container {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin: 20rpx 0;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  margin-right: 24rpx;
+  height: 17rpx;
+}
+
+.stars > image {
+  width: 17rpx;
+  height: 17rpx;
+  margin-right: 3rpx;
+}
+
+.stars_container > text {
+  color: #1f3463;
+  line-height: 17rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+}

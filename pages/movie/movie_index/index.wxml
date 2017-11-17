@@ -1,0 +1,25 @@
+<import src="../movie_list_template/movie_list.wxml" />
+<import src="../movie_grid_template/movie_grid.wxml" />
+
+<view>
+  <view class="search">
+    <icon type="search" bindtap="onSearchBtn" size="13" color="#26139A" />
+    <input type="text" value="{{value}}" confirm-type="search" bindfocus="onFocus" bindblur="onBlur" bindconfirm="onConfirm" placeholder-class="placeholder" placeholder="楚乔传" />
+    <image hidden="{{canelBtn}}" bindtap="onCanelBtn" data-cleckBtn="close" src="/images/icon/xx.png"></image>
+  </view>
+  <view wx:if="{{movieListPanel}}" class="movieList">
+    <view class="movie_classify">
+      <template is="movieListTemplate" data="{{...inTheaters}}"></template>
+    </view>
+    <view class="movie_classify">
+      <template is="movieListTemplate" data="{{...comingSoon}}"></template>
+    </view>
+    <view class="movie_classify">
+      <template is="movieListTemplate" data="{{...top250}}"></template>
+    </view>
+  </view>
+  <view wx:else class="canelPanel">
+    <template is="movieGridTemplate" data="{{...searchResult,error,loading,over}}">
+    </template>
+  </view>
+</view>

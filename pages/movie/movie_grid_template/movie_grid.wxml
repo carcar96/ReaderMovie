@@ -1,0 +1,21 @@
+<import src="../movie_template/movie.wxml" />
+
+<template name="movieGridTemplate">
+  <view class="movie_more_container">
+    <block wx:for="{{movies}}" wx:key="*those" wx:for-item="movie">
+      <view class="single_view_container">
+        <template is="movieTemplate" data="{{...movie}}">
+        </template>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{error}}" class="error_container">
+    <text>找不到相关数据呢...</text>
+  </view>
+  <view wx:if="{{loading}}" class="loading_container">
+    <image mode="center" src="http://p2.so.qhimgs1.com/bdr/_240_/t01e9eaed0cc155486e.gif"></image>
+  </view>
+  <view wx:if="{{over}}" class="over_container">
+    <text>--------------------没有更多数据了--------------------</text>
+  </view>
+</template>

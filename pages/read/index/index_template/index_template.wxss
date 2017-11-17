@@ -1,0 +1,60 @@
+.img-time {
+  margin: 10rpx;
+  flex-direction: row;
+  height: 60rpx;
+}
+
+.img-time image {
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+}
+
+.img-time text {
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 30rpx;
+  line-height: 60rpx;
+}
+
+.title {
+  margin-left: 10rpx;
+  font-weight: 600;
+  margin-top: 10rpx;
+  letter-spacing: 1rpx;
+}
+
+.thumb {
+  width: 100%;
+  height: 380rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+p {
+  color: #666;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  letter-spacing: 4rpx;
+  margin: 15rpx;
+  text-indent: 1em;
+}
+
+.icon {
+  margin: 15rpx 10rpx;
+}
+
+.icon image {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 10rpx;
+  float: left;
+}
+
+.icon text {
+  font-size: 22rpx;
+  color: #777;
+  margin-right: 15rpx;
+  margin-left: 5rpx;
+  float: left;
+}

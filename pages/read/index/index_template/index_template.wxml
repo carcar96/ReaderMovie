@@ -1,0 +1,15 @@
+<template name="indexItem">
+  <view class="img-time">
+    <image src="{{item.author_img}}"></image>
+    <text>{{item.date}}</text>
+  </view>
+  <text class="title">{{item.title}}</text>
+  <image src="{{item.index_img}}" class="thumb"></image>
+  <p>{{item.content}}</p>
+  <view class="icon">
+    <image src="/images/icon/chat1.png"></image>
+    <text>{{item.chat_num}}</text>
+    <image src="/images/icon/view.png"></image>
+    <text>{{item.view_num}}</text>
+  </view>
+</template>
