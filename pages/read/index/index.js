@@ -18,6 +18,7 @@ Page({
     this.setData({
       index_key: indexData.indexList
     })
+
     //var obj = this.asAndcp();
     //this.touTiaoNews(obj.as, obj.cp);
   },
