@@ -3,3 +3,10 @@
 在线链接查看：<http://ozjuozo8e.bkt.clouddn.com/readerMovie.gif>
 
 [![展示动态图](http://ozjuozo8e.bkt.clouddn.com/readerMovie.gif "展示动态图")](http://ozjuozo8e.bkt.clouddn.com/readerMovie.gif "展示动态图")
+
+
+#order
+- git init
+- git add README.md
+- git commit -m "first commit"
+- git push -u origin master
